@@ -205,6 +205,8 @@
                             <!-- <kbd>regen init --chain-id=aplikigo-1 $REGEN_MONIKER</kbd> - где $REGEN_MONIKER - название
                             вашей ноды (может быть чем угодно)<br> -->
                             <kbd>regen init --chain-id=aplikigo-1 $REGEN_MONIKER</kbd><br>
+                            Примерный вывод:<br>
+                            <img src="img/2.png" class="img-fluid my-1" alt="Regen Init Output"><br>
                             <div class="alert alert-warning my-3">
                                 Следующий шаг нужно выполнять только в том случае, если у вас нет кошелька (<kbd>regen
                                     keys list</kbd> - список ваших кошельков).<br>
@@ -256,14 +258,16 @@
                             Ищем там строчки <kbd>seeds</kbd> и <kbd>persistent_peers</kbd>, устанавливаем следующие значения:<br>
                             <kbd>seeds = "9082e4d408b0794f884f8c1733d7d11ffb010e38@161.35.51.84:26656"</kbd><br>
                             <kbd>persistent_peers = "35d64042e1a5f6466b2b1540fa2e859dfc49666e@public-rpc1.regen.vitwit.com:26656,9082e4d408b0794f884f8c1733d7d11ffb010e38@161.35.51.84:26656"</kbd><br>
-                            Жмем Ctrl + X, затем Y.
+                            Жмем Ctrl + X, затем Y. Итоговый результат:<br>
+                            <img src="img/3.png" class="img-fluid my-1" alt="Config Output 1"><br>
                         </div>
                         <div class="mb-4 ml-1">
                             Осталось установить минимальную цену на газ, для этого открываем другой конфигурационный файл командой ниже:<br>
                             <kbd>nano $HOME/.regen/config/app.toml</kbd><br>
                             Ищем там строчку <kbd>minimum-gas-prices</kbd>, устанавливаем следующее значение:<br>
                             <kbd>minimum-gas-prices = "0.025utree"</kbd><br>
-                            Жмем Ctrl + X, затем Y.
+                            Жмем Ctrl + X, затем Y. Итоговый результат:<br>
+                            <img src="img/4.png" class="img-fluid my-1" alt="Config Output 2"><br>
                         </div>
                     </div>
                     <div class="mb-5" id="validator">
@@ -273,7 +277,8 @@
                             Для того, чтобы запустить ноду выполните следующую команду:<br>
                             <kbd>screen -S regen_node</kbd><br>
                             <kbd>regen start</kbd><br>
-                            Для выхода из <kbd>screen</kbd> нажмите Ctrl + A, затем D.<br>
+                            Для выхода из <kbd>screen</kbd> нажмите Ctrl + A, затем D. В скрине с запущенной нодой вы должны видеть примерно следующее:<br>
+                            <img src="img/5.png" class="img-fluid my-1" alt="Node Output"><br>
                             Проверьте статус командой:<br>
                             <kbd>regen status</kbd><br>
                         </div>
@@ -303,7 +308,6 @@
                             Проверьте логи командой:<br>
                             <kbd>sudo journalctl -u regen -f</kbd>
                         </div>
-
                         Поздрвляю, нода запущена!
                     </div>
 
