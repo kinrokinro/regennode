@@ -104,3 +104,9 @@ h5 {
 .bg-kbd {
     background-color: #212529;
 }
+
+#cyberlenin {
+    height: 20px;
+    display: flex;
+    margin: auto;
+}
