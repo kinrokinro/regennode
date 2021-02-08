@@ -61,72 +61,63 @@
         <div class="row">
             <div class="col-sm">
                 <div class="alert alert-success text-center">
-                    <p class="mb-0">Последняя версия: 0.6.0</p>
+                    <p class="mb-0">Latest version: 0.6.0</p>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-sm">
-                <p class="text-center">Привет! Этот гайд создан для того, чтобы позволить любому человеку развернуть
-                    ноду Regen без особых сложностей.</p>
+                <p class="text-center">This guide was created to allow anyone to deploy a Regen node without any difficulties.</p>
             </div>
         </div>
         <div class="row">
             <div class="col-sm mb-5">
-                <h3>Требования:</h3>
+                <h3>Requirements:</h3>
                 <ul>
-                    <li>Сервер со следующими характеристиками:</li>
-                    <ul>
-                        <li>Минимум 8 гигабайт оперативной памяти</li>
-                        <li>Минимум 4-х поточный процессор</li>
-                        <li>200 гигабайт SSD</li>
-                    </ul>
+                    <li>At least 8 Gb of RAM</li>
+                    <li>Min. 4-thread processor</li>
+                    <li>200 GB SSD</li>
                 </ul>
             </div>
         </div>
         <div class="row">
             <div class="container">
                 <div class="col-sm mb-5">
-                    <h3>0. Покупка сервера</h3>
+                    <h3>0. Buying a server</h3>
                     <button type="button" class="btn btn-primary" id="vpsButton">Раскрыть содержимое</button><br>
                     <div id="vpsContent" class="d-none mb-3">
-                        Для начала нужно определиться с местом, где мы будем брать наш сервер. Я рекомендую сервис <a
-                            href="https://www.vultr.com/?ref=8671282">Vultr.com</a>, поэтому в качестве примера мы будем
-                        рассматривать именно его.<br>
-                        <strong>Регистрация</strong><br>
-                        Переходим на <a href="https://www.vultr.com/?ref=8671282">сайт</a>, кликаем Sign Up<br>
+                        As a first step we need to rent a server (VPS). I recommend <a
+                            href="https://www.vultr.com/?ref=8671282">Vultr.com</a>.<br>
+                        <strong>Registation</strong><br>
+                        Go to the <a href="https://www.vultr.com/?ref=8671282">site</a>, click Sign Up<br>
                         <img src="img/vps/1.png" class="img-fluid mb-2" alt="VPS Installing 1"><br>
-                        Заполняем форму, кликаем Create Account<br>
+                        Fill the form, click Create Account:<br>
                         <img src="img/vps/2.png" class="img-fluid mb-2" alt="VPS Installing 2"><br>
-                        В <a href="https://my.vultr.com/">личном кабинете</a> кликаем на плюсик:<br>
+                        On the 'Products' page click Plus button:<br>
                         <img src="img/vps/3.png" class="img-fluid mb-2" alt="VPS Installing 3"><br>
-                        Нам нужен сервер с минимум 8 гигабайтами оперативной памяти, минимум 4 vCPU (потоками) и 200GB
-                        SSD, ищем,
-                        находим:<br>
+                        We need at least 8Gb RAM server with 200 GB SSD, let's chose the closest one:<br>
                         <img src="img/vps/4.png" class="img-fluid mb-2" alt="VPS Installing 4"><br>
                         <img src="img/vps/5.png" class="img-fluid mb-2" alt="VPS Installing 5"><br>
                         <img src="img/vps/6.png" class="img-fluid mb-2" alt="VPS Installing 6"><br>
-                        Арендуем<br>
+                        Now let's rent it (hostname can be any), click Deploy Now:<br>
                         <img src="img/vps/7.png" class="img-fluid mb-2" alt="VPS Installing 7"><br>
-                        Кликаем на Products слева в верхнем углу, переходим в панель с нашими серверами, ждем пока
-                        сервер перейдет в статус Running, кликаем на сервер<br>
+                        Then click 'Products' at the top left and wait till our server's status is 'Running' (green) and
+                        click on the server:<br>
                         <img src="img/vps/8.png" class="img-fluid mb-2" alt="VPS Installing 8"><br>
-                        Теперь нам нужны данные для подключения к серверу: его IP, логин и пароль. Их мы можем найти в
-                        местах, указанных на скриншоте:<br>
+                        We need the following server data, copy&paste them to notepad:<br>
                         <img src="img/vps/9.png" class="img-fluid mb-2" alt="VPS Installing 9"><br>
-                        Нам нужно подключиться к нашему серверу, для этого воспользуемся программой <a
-                            href="https://termius.com/">Termius</a>, скачиваем, устанавливаем, запускаем.<br>
-                        Необходимо создать новое подключение, для этого проделываем действия как на скриншоте<br>
+                        Now we need to connect to the server, to do this we will use <a
+                            href="https://termius.com/">Termius</a>. First of all download and install it.<br>
+                        Open Terminus and click '+New Host' as shown on the screen:<br>
                         <img src="img/vps/10.png" class="img-fluid mb-2" alt="VPS Installing 10"><br>
-                        В указанные поля нужно внести данные которые мы получали из панели сервера в Vultr, а именно:
-                        IP, логин и пароль. В поле Label пишем что угодно - это название нашего севрера в списке
-                        серверов
-                        в Termius.<br>
+                        In the following fields we need to type our server data (that we copied from Vultr): IP address,
+                        login and pass. You can type anything in 'Label' field - this is just the name of the server for
+                        your convenience.<br>
                         <img src="img/vps/11.png" class="img-fluid mb-2" alt="VPS Installing 11"><br>
-                        Два раза кликаем по добавленному серверу, в открывшемся диалоговом окне нажимаем "yes".<br>
+                        Double click on the server, in the pop-up click 'Yes'.<br>
                         <img src="img/vps/12.png" class="img-fluid mb-2" alt="VPS Installing 12"><br>
                         <img src="img/vps/13.png" class="img-fluid mb-2" alt="VPS Installing 13"><br>
-                        Поздравляю, вы зашли! Можно продолжать.
+                        Now we are in, congratulations! So we can continue.
                     </div>
                 </div>
             </div>
@@ -135,7 +126,7 @@
             <div class="container">
                 <div class="col-sm">
                     <div class="mb-5" id="preparation">
-                        <h3>1. Подготовка сервера</h3>
+                        <h3>1. Preparing the server</h3>
                         <div>
                             <!-- <h4>1.1. Подготовка окружения</h4>
                                 <div class="mb-4 ml-1">
@@ -148,52 +139,47 @@
                                         $HOME/.bashrc</kbd> (можно любое)<br>
                                     <kbd>source ~/.bashrc</kbd><br>
                                 </div> -->
-                            <h4>1.1. Установка зависимостей</h4>
+                            <h4>1.1. Installing dependencies</h4>
                             <div class="mb-4 ml-1">
-                                Для начала нам необходимо установить зависимости, для этого выполняем следующую
-                                команду:<br>
+                                First, we need to install the dependencies, for this we run the following command:<br>
                                 <kbd>sudo apt-get install build-essential jq screen wget -y</kbd><br>
                             </div>
-                            <h4>1.2. Установка Go</h4>
+                            <h4>1.2. Installing Go</h4>
                             <div class="mb-4 ml-1">
-                                Для компиляции и последующей установки ноды нам нужно установить Go, делаем это
-                                командами:<br>
+                                To compile and then install the node, we need to install Go, we do this with the commands:<br>
                                 <kbd>wget https://golang.org/dl/go1.15.8.linux-amd64.tar.gz</kbd><br>
                                 <kbd>tar -C /usr/local -xzf go1.15.8.linux-amd64.tar.gz</kbd><br>
                                 <kbd>echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.bashrc</kbd><br>
                                 <kbd>echo 'export GOPATH=/usr/local/go' >> $HOME/.bashrc</kbd><br>
                                 <kbd>source ~/.bashrc</kbd><br>
                                 <kbd>go version</kbd><br>
-                                Должно вывести "go version go1.15.8..."
+                                Must be "go version go1.15.8..."
                             </div>
                         </div>
                     </div>
                     <div class="mb-5" id="setup">
-                        <h3>2. Установка ноды</h3>
+                        <h3>2. Node set-up</h3>
                         <div class="mb-4">
-                            Теперь нам нужно скомпилировать и установить ноду Regen, для этого выполняем следующие
-                            команды:<br>
+                            Now we need to compile and install the Regen node, for this we run the following commands:<br>
                             <kbd>mkdir -p $GOPATH/src/github.com/regen</kbd><br>
                             <kbd>cd $GOPATH/src/github.com/regen</kbd><br>
                             <kbd>git clone https://github.com/regen-network/regen-ledger.git</kbd><br>
                             <kbd>cd regen-ledger</kbd><br>
                             <kbd>git checkout v0.6.0</kbd><br>
                             <kbd>make install</kbd><br>
-                            Ждем конца процесса установки.<br>
+                            Wait for the process to end the installation process.<br>
                         </div>
                         <div class="mb-4">
-                            Проверим, все ли установилось корректно:<br>
+                            Let's check if everything was installed correctly:<br>
                             <kbd>regen version --long | grep "version"</kbd><br>
                             <img src="img/1.png" class="img-fluid my-1" alt="Regen Status"><br>
-                            Если да - вы увидите примерно то же самое, что и на скриншоте. Если нет - повторите шаги
-                            выше.
+                            If so, you will see more or less the same as in the screenshot above. If not, repeat the steps above.
                         </div>
                     </div>
                     <div class="mb-5" id="keys">
                         <h3>3. Генерация ключа</h3>
                         <div class="mb-4">
-                            Сначала нам нужно подготовить окружение к работе, для этого мы все будем делать в
-                            отдельном скрине и запишем переменные, которые нам пригодятся позднее:<br>
+                            Firstly, we need to prepare the environment; to do this we will do the following in a separate screen and write down the variables that will be used later:<br>
                             <kbd>echo 'export REGEN_WALLET=имя кошелька' >>
                                 $HOME/.bashrc</kbd> (если у вас уже есть кошелек - regen keys list)<br>
                             <kbd>echo 'export REGEN_MONIKER=имядляноды' >>
@@ -201,39 +187,33 @@
                             <kbd>source ~/.bashrc</kbd><br>
                         </div>
                         <div class="mb-4">
-                            Для того, чтобы стать валидатором нам нужно инициализировать нашу ноду и добавить ключи. Для
-                            этого выполняем следующие команды:<br>
-                            <!-- <kbd>regen init --chain-id=aplikigo-1 $REGEN_MONIKER</kbd> - где $REGEN_MONIKER - название
-                            вашей ноды (может быть чем угодно)<br> -->
+                            In order to become a validator, we need to initialize our node and add keys. To do this, run the following commands:<br>
                             <kbd>regen init --chain-id=aplikigo-1 $REGEN_MONIKER</kbd><br>
-                            Примерный вывод:<br>
+                            What you will see:<br>
                             <img src="img/2.png" class="img-fluid my-1" alt="Regen Init Output"><br>
                             <div class="alert alert-warning my-3">
-                                Следующий шаг нужно выполнять только в том случае, если у вас нет кошелька (<kbd>regen
-                                    keys list</kbd> - список ваших кошельков).<br>
-                                Если же у вас есть сид фраза, то вы можете восстановить свой кошелек следующей
-                                командой:<br>
-                                <!-- <kbd>regen keys add $REGEN_WALLET --recover</kbd> - где $REGEN_WALLET - название вашего
-                                кошелька<br> -->
+                                The next step only needs to be performed if you do NOT have a wallet (use <kbd>regen
+                                    keys list</kbd> - to see the list of your wallets).<br>
+                                If you have a seed phrase, then you can restore your wallet with the following command:<br>
                                 <kbd>regen keys add $REGEN_WALLET --recover</kbd><br>
                             </div>
-                            Создать новый кошелек с названием $REGEN_WALLET:<br>
+                            To create a new wallet use $REGEN_WALLET:<br>
                             <kbd>regen keys add $REGEN_WALLET</kbd><br>
-                            Два раза вводим наш пароль, нажимаем Enter. Готово, теперь у вас есть ключи.
+                            We enter our password twice, press Enter. Done, now you have the keys.
                             <div class="alert alert-warning my-3">
-                                Обязательно запишите и сохраните вывод этой команды - используя сид (набор слов в последней строке вывода команды) вы сможете в последствии восстановить доступ к кошельку.
+                                Be sure to write down and save the output of this command - using the seed (a set of words in the last line of the command output), you can later restore access to the wallet.
                             </div>
                         </div>
                     </div>
                     <div class="mb-5" id="validator">
-                        <h3>4. Работа над валидатором</h3>
-                        <h4>4.1. Создание валидатора</h4>
+                        <h3>4. Working on the validator</h3>
+                        <h4>4.1. Creating a validator</h4>
                         <div class="mb-4 ml-1">
                             <div class="alert alert-warning my-3">
-                                В данный момент вы не можете создать валидатора если не прошли отбор в тестнет, однако, вы можете дождаться пока заработает кран для того, чтоб у вас появился баланс, который вы сможете застейкать.<br>
-                                Выполнять команду ниже если вы прошли в тестнет НЕ НУЖНО.
+                                At the moment, you cannot create a validator if you have not passed the selection in the testnet, however, you can wait until the crane starts working so that you have a balance that you can stake.<br>
+                                There is NO NEED to execute the command below if you went to the testnet.
                             </div>
-                            Для того, чтобы создать валидатора выполните следующую команду:<br>
+                            To create a validator run the following command:<br>
                             <div class="bg-kbd">
                                 <kbd>regen tx staking create-validator --amount=9000000utree \<br>
                                     --pubkey=$(regen tendermint show-validator) \<br>
@@ -247,45 +227,45 @@
                                     --from=$REGEN_WALLET</kbd>
                             </div>
                         </div>
-                        <h4>4.2. Настройка валидатора</h4>
+                        <h4>4.2. Validator set-up</h4>
                         <div class="mb-4 ml-1">
-                            Для начала нам необходимо загрузить файл <kbd>genesis.json</kbd> в конфигурационный файл Regen:<br>
+                            First, we need to load <kbd>genesis.json</kbd> file into the Regen config file:<br>
                             <kbd>curl https://raw.githubusercontent.com/regen-network/testnets/master/aplikigo-1/genesis.json > $HOME/.regen/config/genesis.json</kbd>
                         </div>
                         <div class="mb-4 ml-1">
-                            Теперь нам нужно добавить <kbd>seeds</kbd> и <kbd>persistent_peers</kbd> в конфигурационный файл.<br>
-                            Для этого открываем конфигурационный файл:<br>
+                            Now we need to add <kbd>seeds</kbd> and <kbd>persistent_peers</kbd> to the config file.<br>
+                            To do this, open the configuration file:<br>
                             <kbd>nano $HOME/.regen/config/config.toml</kbd><br>
-                            Ищем там строчки <kbd>seeds</kbd> и <kbd>persistent_peers</kbd>, устанавливаем следующие значения:<br>
+                            We look for the lines <kbd>seeds</kbd> and <kbd>persistent_peers</kbd>, set the following values:<br>
                             <kbd>seeds = "9082e4d408b0794f884f8c1733d7d11ffb010e38@161.35.51.84:26656"</kbd><br>
                             <kbd>persistent_peers = "35d64042e1a5f6466b2b1540fa2e859dfc49666e@public-rpc1.regen.vitwit.com:26656,9082e4d408b0794f884f8c1733d7d11ffb010e38@161.35.51.84:26656"</kbd><br>
-                            Жмем Ctrl + X, затем Y. Итоговый результат:<br>
+                            Press Ctrl + X, then Y. Final result:<br>
                             <img src="img/3.png" class="img-fluid my-1" alt="Config Output 1"><br>
                         </div>
                         <div class="mb-4 ml-1">
-                            Осталось установить минимальную цену на газ, для этого открываем другой конфигурационный файл командой ниже:<br>
+                            All is rest is to set the minimum gas price, to do this we'll open another configuration file with the command below:<br>
                             <kbd>nano $HOME/.regen/config/app.toml</kbd><br>
-                            Ищем там строчку <kbd>minimum-gas-prices</kbd>, устанавливаем следующее значение:<br>
+                            Search for the <kbd>minimum-gas-prices</kbd>, set the value:<br>
                             <kbd>minimum-gas-prices = "0.025utree"</kbd><br>
-                            Жмем Ctrl + X, затем Y. Итоговый результат:<br>
+                            Press Ctrl + X, then Y. Final result:<br>
                             <img src="img/4.png" class="img-fluid my-1" alt="Config Output 2"><br>
                         </div>
                     </div>
                     <div class="mb-5" id="validator">
-                        <h3>5. Запуск ноды</h3>
-                        <h4>5.1. По-умолчанию</h4>
+                        <h3>5. Running the Node</h3>
+                        <h4>5.1. Running by Default</h4>
                         <div class="mb-4 ml-1">
-                            Для того, чтобы запустить ноду выполните следующую команду:<br>
+                            In order to start the node, run the following command:<br>
                             <kbd>screen -S regen_node</kbd><br>
                             <kbd>regen start</kbd><br>
-                            Для выхода из <kbd>screen</kbd> нажмите Ctrl + A, затем D. В скрине с запущенной нодой вы должны видеть примерно следующее:<br>
+                            To exit the <kbd>screen</kbd>, press Ctrl + A, then D. In the screen with the running node, you should see:<br>
                             <img src="img/5.png" class="img-fluid my-1" alt="Node Output"><br>
-                            Проверьте статус командой:<br>
+                            Check the status with the command:<br>
                             <kbd>regen status</kbd><br>
                         </div>
-                        <h4>5.2. В виде сервиса</h4>
+                        <h4>5.2. As a Service</h4>
                         <div class="mb-4 ml-1">
-                            Делаем <kbd>regen</kbd> сервисом следующими командами:<br>
+                            We create <kbd>regen</kbd> as a service with the following commands:<br>
                             <kbd>echo "[Unit]
                                 Description=Regen Node
                                 After=network-online.target
@@ -304,12 +284,12 @@
                             <kbd>sudo systemctl start regen.service</kbd><br>
                         </div>
                         <div class="mb-4 ml-1">
-                            Проверьте статус командой:<br>
+                            Check the status with the command:<br>
                             <kbd>regen status</kbd><br>
-                            Проверьте логи командой:<br>
+                            Check logs with:<br>
                             <kbd>sudo journalctl -u regen -f</kbd>
                         </div>
-                        Поздрвляю, нода запущена!
+                        Congratz, the node is online!
                     </div>
 
                 </div>
