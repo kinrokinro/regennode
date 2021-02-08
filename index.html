@@ -84,7 +84,7 @@
             <div class="container">
                 <div class="col-sm mb-5">
                     <h3>0. Buying a server</h3>
-                    <button type="button" class="btn btn-primary" id="vpsButton">Раскрыть содержимое</button><br>
+                    <button type="button" class="btn btn-primary" id="vpsButton">Click to show</button><br>
                     <div id="vpsContent" class="d-none mb-3">
                         As a first step we need to rent a server (VPS). I recommend <a
                             href="https://www.vultr.com/?ref=8671282">Vultr.com</a>.<br>
@@ -128,17 +128,6 @@
                     <div class="mb-5" id="preparation">
                         <h3>1. Preparing the server</h3>
                         <div>
-                            <!-- <h4>1.1. Подготовка окружения</h4>
-                                <div class="mb-4 ml-1">
-                                    Сначала нам нужно подготовить окружение к работе, для этого мы все будем делать в
-                                    отдельном скрине и запишем переменные, которые нам пригодятся позднее:<br>
-                                    <kbd>screen -S regen_node</kbd><br>
-                                    <kbd>echo 'export REGEN_WALLET=имя кошелька' >>
-                                        $HOME/.bashrc</kbd> (если у вас уже есть кошелек - regen keys list)<br>
-                                    <kbd>echo 'export REGEN_MONIKER=имядляноды' >>
-                                        $HOME/.bashrc</kbd> (можно любое)<br>
-                                    <kbd>source ~/.bashrc</kbd><br>
-                                </div> -->
                             <h4>1.1. Installing dependencies</h4>
                             <div class="mb-4 ml-1">
                                 First, we need to install the dependencies, for this we run the following command:<br>
@@ -177,13 +166,13 @@
                         </div>
                     </div>
                     <div class="mb-5" id="keys">
-                        <h3>3. Генерация ключа</h3>
+                        <h3>3. Key generation</h3>
                         <div class="mb-4">
                             Firstly, we need to prepare the environment; to do this we will do the following in a separate screen and write down the variables that will be used later:<br>
-                            <kbd>echo 'export REGEN_WALLET=имя кошелька' >>
-                                $HOME/.bashrc</kbd> (если у вас уже есть кошелек - regen keys list)<br>
-                            <kbd>echo 'export REGEN_MONIKER=имядляноды' >>
-                                $HOME/.bashrc</kbd> (можно любое)<br>
+                            <kbd>echo 'export REGEN_WALLET=walletname' >>
+                                $HOME/.bashrc</kbd> (if you already have a key - regen keys list)<br>
+                            <kbd>echo 'export REGEN_MONIKER=nodename' >>
+                                $HOME/.bashrc</kbd> (whatever)<br>
                             <kbd>source ~/.bashrc</kbd><br>
                         </div>
                         <div class="mb-4">
