@@ -255,17 +255,17 @@
                         <h4>5.2. As a Service</h4>
                         <div class="mb-4 ml-1">
                             We create <kbd>regen</kbd> as a service with the following commands:<br>
-                            <kbd>echo "[Unit]
-                                Description=Regen Node
-                                After=network-online.target
-                                [Service]
-                                User=${USER}
-                                ExecStart=${GOBIN}/regen start
-                                Restart=always
-                                RestartSec=3
-                                LimitNOFILE=4096
-                                [Install]
-                                WantedBy=multi-user.target
+                            <kbd>echo "[Unit]<br>
+                                Description=Regen Node<br>
+                                After=network-online.target<br>
+                                [Service]<br>
+                                User=${USER}<br>
+                                ExecStart=/usr/local/go/bin/regen start<br>
+                                Restart=always<br>
+                                RestartSec=3<br>
+                                LimitNOFILE=4096<br>
+                                [Install]<br>
+                                WantedBy=multi-user.target<br>
                                 " >regen.service</kbd><br>
                             <kbd>sudo mv regen.service /lib/systemd/system/</kbd><br>
                             <kbd>sudo systemctl daemon-reload</kbd><br>
